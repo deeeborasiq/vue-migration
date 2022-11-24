@@ -9,7 +9,7 @@
     <p><strong>Temporada: </strong>{{ movie.season_number }}</p>
     <p><strong>Disponível em: </strong>{{ movie.source_name }}</p>
     <p><strong>Tipo: </strong>{{ getType(movie.type) }}</p>
-    <p><strong>Lançamento: </strong>{{ movie.source_release_date | formatDate }}</p>
+    <p><strong>Lançamento: </strong>{{ $filters.formatDate(movie.source_release_date) }}</p>
     <template v-slot:footer>
       <div role="button" @click="goBack()">voltar</div>
     </template>
