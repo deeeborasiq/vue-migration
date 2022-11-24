@@ -1,5 +1,5 @@
 <template>
-  <main class="grid">
+  <main class="page grid">
     <section class="container-fluid movies">
       <Card v-for="(item, index) in movies" :key="`card-${index}`">
         <template v-slot:header>
@@ -42,6 +42,11 @@ export default {
 </script>
 
 <style scoped>
+.page {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
 .movies {
   display: grid;
   grid-template-columns: auto;
@@ -49,13 +54,13 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .movies {
-    grid-template-columns: 350px 350px;
+    grid-template-columns: 50% 50%;
   }
 }
 
 @media screen and (min-width: 992px) {
   .movies {
-    grid-template-columns: 350px 350px 350px;
+    grid-template-columns: 33% 33% 33%;
   }
 }
 </style>
