@@ -9,9 +9,9 @@
     <p><strong>Temporada: </strong>{{ movie.season_number }}</p>
     <p><strong>Disponível em: </strong>{{ movie.source_name }}</p>
     <p><strong>Tipo: </strong>{{ getType(movie.type) }}</p>
-    <p><strong>Lançamento: </strong>{{ movie.source_release_date }}</p>
+    <p><strong>Lançamento: </strong>{{ movie.source_release_date | formatDate }}</p>
     <template v-slot:footer>
-      <button @click="goBack()">voltar</button>
+      <div role="button" @click="goBack()">voltar</div>
     </template>
   </Card>
 </template>
