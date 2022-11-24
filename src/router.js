@@ -1,7 +1,4 @@
-import Vue from "vue";
-import Router from "vue-router";
-
-Vue.use(Router);
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
@@ -16,12 +13,13 @@ const routes = [
     component: () => import("./pages/Movie.vue"),
   },
   {
-    path: "*",
+    path: "/:pathMatch(.*)*",
     name: "NotFound",
     component: () => import("./pages/NotFound.vue"),
   },
 ];
-const router = new Router({
+const router = createRouter({
+  history: createWebHistory(),
   routes,
 });
 
