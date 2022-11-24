@@ -29,13 +29,6 @@ export default {
       )[0];
     },
   },
-  mounted() {
-    console.log("params", this.$route.params.id);
-    console.log(
-      this.movies.filter((movie) => movie.id == this.$route.params.id)
-    );
-    console.log("movie", this.movies);
-  },
   methods: {
     getType(value) {
       switch (value) {
